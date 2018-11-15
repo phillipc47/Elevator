@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using ConsoleApp2.Controller;
 using ConsoleApp2.Factory;
 using ConsoleApp2.Floors;
+using ConsoleApp2.Movement;
 using ConsoleApp2.Panel;
 using ConsoleApp2.Visitor;
 using ConsoleApp2.Visitor.Floor;
@@ -36,6 +38,14 @@ namespace ConsoleApp2
 			elevatorPanel.FloorButtons[30].Press();
 
 			Console.WriteLine($"SelectedFloors: {string.Join(", ", elevatorPanel.SelectedFloors())}");
+
+			var moveable = new Elevator.Elevator("Elevator 1", new ElevatorPanel(35), new StandardMovementSpeed());
+
+			var controller = new ElevatorController();
+			controller.AddMoveable(moveable);
+
+			moveable.MoveTo(10);
+
 
 			Console.ReadLine();
 		}

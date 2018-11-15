@@ -8,13 +8,11 @@ namespace ConsoleApp2.Floors
 {
 	public class FloorList : IFloorList
 	{
-		//TODO: Exposes internal list, can make it an IList
+		//TODO: Exposes internal list
 		public IList<IFloor> Floors { get; }
-		private IFloorListBuilder Builder { get; }
 
 		public FloorList(IFloorListBuilder builder, int numberOfFloors)
 		{
-			Builder = builder;
 			Floors = builder.BuildFloors(numberOfFloors);
 		}
 
@@ -26,6 +24,6 @@ namespace ConsoleApp2.Floors
 
 	public interface IFloorList : IFloorListVisitable
 	{
-		IList<IFloor> Floors {get;}
+		IList<IFloor> Floors { get; }
 	}
 }

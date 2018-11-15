@@ -2,7 +2,7 @@
 
 namespace ConsoleApp2.Panel
 {
-	public class CallPanel
+	public class CallPanel : Panel
 	{
 		public IButton Up { get; }
 		public IButton Down { get; }

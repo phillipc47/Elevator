@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp2.Panel
+namespace ConsoleApp2.Elevator
 {
-	public abstract class Panel
+	public enum ElevatorDirection
 	{
+		None,
+		Up,
+		Down
 	}
 }

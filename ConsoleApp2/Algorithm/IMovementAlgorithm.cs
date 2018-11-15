@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp2.Panel
+namespace ConsoleApp2.Algorithm
 {
-	public abstract class Panel
+	public interface IMovementAlgorithm
 	{
 	}
 }

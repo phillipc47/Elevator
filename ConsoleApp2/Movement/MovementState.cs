@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp2
+namespace ConsoleApp2.Elevator
 {
-	class ElevatorController
+	public enum MovementState
 	{
+		Idle,
+		Active
 	}
 }
